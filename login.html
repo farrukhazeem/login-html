@@ -1,0 +1,83 @@
+<head> <meta charset="UTF-8">
+<Title>Log In </title>
+
+<style>
+body {
+    background-repeat: no-repeat;
+    background-image: url('images/img2.jpg');
+    background-size: cover;
+}    
+    
+h1 {
+    color:#0288d1;
+text-align: center;
+}    
+.center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width:300px;
+    height: 400px;
+    margin-top: 30px;
+}
+
+form {
+   position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 346px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.submit {
+    transform: translateX(-50%);
+    width: 86px;
+    height: 30px;
+    background-color: #fff;
+    color: #0288d1;
+    padding: 2px 6px 3px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: black;
+    border-radius: 4px;
+    left: 50%;
+    position: relative;
+}
+
+input:not([type="submit"]) {
+    width: 70%;
+    float: right;
+}
+</style>
+
+</head>
+
+<body>
+    <h1> Log In</h1>
+    <div class="center">
+        <form action="javascript:loginFunc()" method="post">
+        <label>User name:</label> <input type="text" placeholder="Enter Username" id="username" name="username"> </br>
+                                                                                                </br>
+        <label>Password:</label> <input type="password" placeholder="Enter Password" id="pswd" name="pswd">  </br> </br>
+           <div class="signup">If Not Register, Please Cick for <a href="signup.html">SignUp</a></div>  
+       <div><input class="submit" type="submit" value="Login" id="submit" name="Login"/></div>
+        </form>
+    </div>
+
+<script>
+    function loginFunc() {
+        const username = document.getElementById('username').value;
+        const pswd = document.getElementById('pswd').value;
+
+        if(username && pswd) {
+            window.location.href = "welcome.html";
+        }
+        
+    }
+</script>
+</body>
+
+</html>
